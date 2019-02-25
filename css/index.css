@@ -1,0 +1,108 @@
+/* RESETANDO VALORES */
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+* {
+    margin: 0;
+    padding: 0; /* Espaço interno da página */
+}
+
+body {
+    background-color: #444;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.nav-tabs {
+    width: 600px; /*Largura*/
+    height: 400px; /*Altura*/
+    margin: 100px auto; /*Margem acima e abaixo de 100px 
+    e dos lados auto o que centraliza a div*/
+    background-color: #eee;
+    position: relative; /*O position relative posiciona 
+    o elemento em relação a si mesmo. Ou seja, o ponto zero 
+    será o canto superior esquerdo, e ele começará 
+    a contar a partir dali.*/
+    /*border: 1px dashed #e53*/
+}
+
+.nav-tabs ul{
+    list-style: none; /*Retira o estilo padrão da lista*/
+}
+
+.nav-tabs ul li{
+    float: left; /*Coloca cada elemento da lista um ao lado do outro*/
+}
+
+.nav-tabs .tabs-label{
+    width: 250px;
+    padding: 25px; /*Espaço interno*/
+    background: #444;
+    color: #fff;
+    display: block; /*faz com que o elemento HTML seja renderizado como bloco, 
+    tal como os parágrafos e os cabeçalhos o são. Um bloco contém um 
+    espaço em branco tanto em cima como embaixo e não permite outros
+    elementos HTML ao lado, exceto quando tiver sido declarado ao 
+    contrário (por exemplo, declarar a propriedade float para o 
+    elemento próximo ao bloco).*/
+    cursor: pointer; /*Mudando o cursor quando o mouse encima*/
+    text-align: center;
+}
+
+
+/*Mudança de cor da label quando o radio-button está checado*/
+/* especificando o seletor irmão com + para modificar a label*/
+/*Resumidamente, é dito para modifcar a label quando seu 
+radio-button é selecionado*/
+input.radio-tabs:checked + .tabs-label {
+    color: #000;
+    background: #eee;
+}
+/*Escondendo os radio buttons*/
+.radio-tabs {
+    display: none;
+}
+
+/*Mudando a borda acima e a cor de background da tela do conteúdo*/
+.tab-content {
+    border-top: 5px solid #eee;
+    background-color: #fff;
+    position: absolute; /*Enquanto o elemento com Position Relative 
+    utiliza seu próprio canto para referenciar sua posição, 
+    o elemento com Position Absolute se utiliza do ponto 
+    superior esquerdo de outros elementos. Estes elementos são os 
+    parentes dele do elemento com position absolute. 
+    Mais especificamente o pai.*/
+    height: 290px;
+    width: 600px;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    background-color: #eee;
+    padding: 10px 0;
+    align-content: center;
+    align-items: center;
+}
+
+/*Fazendo aparecer o conteúdo*/
+input.radio-tabs + .tabs-label + .tab-content{
+    opacity: 0;
+    transition: opacity ease-in-out .5s;
+    display: flex;
+    /*border: 1px dashed #000;*/
+}
+input.radio-tabs:checked + .tabs-label + .tab-content{
+    opacity: 1;
+    z-index: 1000;
+}
+form {
+    text-align: center;
+    width: 600px;
+    height: 250px;
+    margin: auto;
+    /*border: 1px solid #000;*/
+}
+form .form{
+    width: 250px;
+    height: 25px;
+    display: block;
+    margin: 20px auto;
+}
