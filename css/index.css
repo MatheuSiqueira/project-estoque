@@ -104,5 +104,13 @@ form .form{
     width: 250px;
     height: 25px;
     display: block;
+    border: none;
+    background-color: #eee; 
+}
+.div-input {
+    width: 250px;
+    height: 25;
+    border-bottom: 1px solid #444;
+    padding: 0;
     margin: 20px auto;
 }
