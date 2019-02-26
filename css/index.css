@@ -109,8 +109,19 @@ form .form{
 }
 .div-input {
     width: 250px;
-    height: 25;
+    height: 25px;
     border-bottom: 1px solid #444;
     padding: 0;
     margin: 20px auto;
+}
+.button-input {
+    width: 200px;
+    height: 25px;
+    color: #eee;
+    background-color: #444;
+    border: none;
+}
+.button-input:hover {
+    box-shadow: 2px 3px #888;
+    cursor: pointer;
 }
